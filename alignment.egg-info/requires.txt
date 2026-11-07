@@ -1,0 +1,21 @@
+accelerate>=1.5.2
+math-verify[antlr4-13-2]>=0.7.0
+modal>=1.1.0
+pytest>=8.3.5
+pylatexenc>=2.10
+torch
+transformers>=4.50.0
+typer>=0.15.4
+xopen>=2.0.2
+
+[gpu]
+alpaca-eval>=0.6.6
+torch
+vllm==0.19.1
+wandb>=0.26.0
+
+[gpu:sys_platform == "linux" and platform_machine == "x86_64"]
+flash-attn @ https://github.com/lesj0610/flash-attention/releases/download/v2.8.3-cu12-torch2.10-cp312/flash_attn-2.8.3%2Bcu12torch2.10cxx11abiTRUE-cp312-cp312-linux_x86_64.whl
+
+[plots]
+wandb>=0.26.0
